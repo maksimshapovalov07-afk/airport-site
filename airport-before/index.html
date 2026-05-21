@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Аэропорт Шереметьево</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Аэропорт Шереметьево</h1>
+        <div class="time" id="currentTime"></div>
+    </div>
+
+    <div class="tabs">
+        <button class="btn" onclick="showArrivals()">ПРИЛЁТ</button>
+        <button class="button-primary" onclick="showDepartures()">ВЫЛЕТ</button>
+    </div>
+
+    <div class="search">
+        <input type="text" id="searchInput" placeholder="Поиск рейса..." onkeyup="searchFlights()">
+    </div>
+
+    <div class="stats" id="stats"></div>
+
+    <div class="table-wrapper">
+        <table id="flightTable">
+            <thead>
+                <tr>
+                    <th>Рейс</th>
+                    <th>Направление</th>
+                    <th>Время</th>
+                    <th>Статус</th>
+                </tr>
+            </thead>
+            <tbody id="flightBody">
+                <tr><td colspan="4">Загрузка...</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="footer">
+        <p>© 2024 Аэропорт Шереметьево</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
